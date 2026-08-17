@@ -53,7 +53,7 @@ sudo fail2ban-client status sshd
 The Wazuh installation assistant was downloaded and used to install the Wazuh components.
 
 ```bash
-curl -sO https://packages.wazuh.com/4.12/wazuh-install.sh
+curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh
 sudo bash wazuh-install.sh -a
 ```
 
