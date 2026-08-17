@@ -85,17 +85,43 @@ These events were then investigated through the Wazuh dashboard.
 
 ## Evidence
 
-Screenshots documenting the lab are available in the `screenshots` directory.
+The following screenshots document the major stages of the lab.
 
-The evidence includes:
+### Wazuh Dashboard
 
-- Custom Wazuh brute-force rule
-- Fail2ban configuration/status
-- UFW firewall containment
-- Wazuh dashboard overview
-- Authentication failure details
-- Level 12 brute-force alert
-- Password-guessing investigation
+The Wazuh dashboard provides an overview of security events detected within the Ubuntu environment.
+
+![Wazuh Dashboard Overview](screenshots/Wazuh_Dashboard_Overview.png)
+
+### Authentication Failure Detection
+
+A failed authentication event was detected and investigated through Wazuh.
+
+![Wazuh Failed Login](screenshots/Wazuh_Failed_Login_Details.png)
+
+### Custom Level 12 Brute-Force Detection
+
+A custom Wazuh rule was created to detect the simulated brute-force event and generate a Level 12 alert.
+
+![Level 12 Brute Force Alert](screenshots/Wazuh_Level12_Brute_Force_Alert.png)
+
+### Custom Detection Rule
+
+The custom rule used to generate the Level 12 brute-force alert is shown below.
+
+![Custom Brute Force Rule](screenshots/Custom_Brute_Force_Rule_Added.png)
+
+### Firewall Containment
+
+UFW was used to temporarily deny a simulated source IP. The rule was verified and then removed to restore the lab environment.
+
+![UFW Firewall Containment](screenshots/UFW_Firewall_Containment_Level12.png)
+
+### Fail2ban SSH Protection
+
+Fail2ban was configured with an active SSH jail to provide protection against repeated SSH authentication failures.
+
+![Fail2ban Status](screenshots/Fail2ban_Status.png)
 
 ## Key Takeaways
 
